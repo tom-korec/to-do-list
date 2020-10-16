@@ -1,38 +1,160 @@
-.App {
-  text-align: center;
+:root {
+  --main-color: #f6f8fa;
+  --bg-color1: #24292e;
+  --bg-color2: #34393e;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: var(--bg-color1);
+  color: var(--main-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-header {
-  background-color: #282c34;
+main {
+  width: 100vw;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+button[disabled] {
+  color: var(--bg-color2);
+  cursor: not-allowed;
+}
+
+.submit-button {
+  width: 2rem;
+  background-color: var(--bg-color1);
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 0.125rem;
+  margin-left: 1rem;
+}
+
+.text-input {
+  border: 1px solid var(--main-color);
+  border-radius: 0.125rem;
+  background-color: var(--main-color);
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--main-color);
+  border-radius: 0.125rem;
+  color: var(--main-color);
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+
+.checkbox.checkbox-checked {
+  background-color: var(--bg-color1);
+}
+
+.checkbox-mark-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.checkbox-mark:before {
+  position: absolute;
+  content: "L";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  text-align: center;
+  color: white;
+  font-family: arial, serif;
+  transform: scaleX(-1) rotate(-35deg);
+}
+
+/* tdl = to-do-list*/
+.tdl-app {
+  min-height: 35vh;
+  max-width: 24rem;
+  width: 80%;
+  padding: 1rem;
+  background-color: var(--bg-color2);
+  border: 1px solid var(--main-color);
+}
+
+.tdl-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.tdl-form > input {
+  width: calc(100% - 3rem);
+  height: 1.5rem;
+  padding: 0 0.5rem;
+  border: none;
+}
+
+.tdl-form > button {
+  height: 1.5rem;
+}
+
+.tdl-add-form {
+  margin-bottom: 1rem;
+}
+
+.tdl-edit-form {
+  width: auto;
+  flex: 1 0;
+  margin: 0 1rem;
+}
+
+.tdl-items {
+  width: 100%;
+}
+
+.tdl-item {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.tdl-item-text {
+  flex: 1 0;
+  margin: 0 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tdl-item-text-closed {
+  text-decoration: line-through;
+}
+
+.tdl-item-delete-button {
+  visibility: hidden;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: transparent;
+  color: firebrick;
+  border: 3px solid firebrick;
+}
+
+.tdl-item:hover .tdl-item-delete-button {
+  visibility: visible;
 }
