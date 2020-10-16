@@ -10,7 +10,6 @@
     "@types/node": "^12.12.67",
     "@types/react": "^16.9.51",
     "@types/react-dom": "^16.9.8",
-    "cypress": "^5.4.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
@@ -39,6 +38,7 @@
   },
   "devDependencies": {
     "@testing-library/react-hooks": "^3.4.2",
+    "cypress": "^5.4.0",
     "prettier": "2.1.2",
     "react-test-renderer": "^16.13.1",
     "ts-jest": "24.3.0",
