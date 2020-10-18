@@ -1,4 +1,4 @@
-import { ToDoItem } from "../../types/toDoItem";
+import { ToDoItem } from "../../../types/toDoItem";
 
 export type State = ToDoItem[];
 

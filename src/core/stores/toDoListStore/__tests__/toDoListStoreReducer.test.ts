@@ -1,23 +1,9 @@
 import { useReducer } from "react";
-import {renderHook, act, HookResult} from "@testing-library/react-hooks";
+import { act, HookResult, renderHook } from "@testing-library/react-hooks";
 
+import { toDoItem1, toDoItem2 } from "./entities";
 import { reducer } from "../reducer";
 import { Actions } from "../types";
-import { ToDoItem } from "../../../types/toDoItem";
-
-const toDoItem1: ToDoItem = {
-  id: "1",
-  text: "text",
-  isOpen: true,
-  date: new Date("10/10/2020"),
-};
-
-const toDoItem2: ToDoItem = {
-  id: "2",
-  text: "other text",
-  isOpen: true,
-  date: new Date("10/11/2020"),
-};
 
 describe("ToDoListStoreReducer", () => {
   let result: HookResult<any>;

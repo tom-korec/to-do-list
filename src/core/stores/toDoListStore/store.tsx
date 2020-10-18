@@ -1,20 +1,13 @@
-import React, {createContext, useContext, useReducer} from "react";
-import {ToDoItem} from "../../types/toDoItem";
-import {saveToLocalStorage, withPersistence,} from "../persistence";
-import {initFunction, reducer} from "./reducer";
-import {Dispatch, State, Actions, DispatchActions} from "./types";
+import React, { createContext, useContext } from "react";
+import { ToDoItem } from "../../../types/toDoItem";
+import { Dispatch, State, Actions, DispatchActions } from "./types";
+import { useToDoListReducerWithLocalStoragePersistence } from "./localStoragePersistence";
 
 const StoreStateContext = createContext<State | undefined>(undefined);
-const StoreDispatchContext = createContext<Dispatch | undefined>(
-  undefined
-);
+const StoreDispatchContext = createContext<Dispatch | undefined>(undefined);
 
 export const ToDoListStoreProvider: React.FC = ({ children }) => {
-  const [state, dispatch] = useReducer(
-    withPersistence(reducer, saveToLocalStorage),
-    [],
-    initFunction
-  );
+  const [state, dispatch] = useToDoListReducerWithLocalStoragePersistence();
   return (
     <StoreStateContext.Provider value={state}>
       <StoreDispatchContext.Provider value={dispatch}>

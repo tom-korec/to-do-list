@@ -30,10 +30,15 @@ main {
 
 button {
   cursor: pointer;
+  outline: none;
+}
+
+input {
+  outline: none;
 }
 
 button[disabled] {
-  color: var(--bg-color2);
+  background-color: var(--bg-color2);
   cursor: not-allowed;
 }
 

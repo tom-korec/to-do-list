@@ -6,7 +6,7 @@ export interface DeleteButtonProps {
 
 export const DeleteButton: FC<DeleteButtonProps> = ({ onClick }) => {
   return (
-    <button className="tdl-item-delete-button" onClick={onClick}>
+    <button data-cy="todo-item-delete" className="tdl-item-delete-button" onClick={onClick}>
       -
     </button>
   );

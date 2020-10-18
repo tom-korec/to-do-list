@@ -1,26 +1,13 @@
 import React, { FC } from "react";
 import { renderHook, act, HookResult } from "@testing-library/react-hooks";
+
+import { toDoItem1, toDoItem2 } from "./entities";
 import {
   ToDoListStoreProvider,
   useToDoListStoreState,
   useToDoListStoreDispatch,
 } from "../store";
-import { ToDoItem } from "../../../types/toDoItem";
 import { DispatchActions } from "../types";
-
-const toDoItem1: ToDoItem = {
-  id: "1",
-  text: "text",
-  isOpen: true,
-  date: new Date("10/10/2020"),
-};
-
-const toDoItem2: ToDoItem = {
-  id: "2",
-  text: "other text",
-  isOpen: true,
-  date: new Date("10/11/2020"),
-};
 
 describe("ToDoListStoreContext", () => {
   let result: HookResult<any>;

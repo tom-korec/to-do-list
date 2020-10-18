@@ -1,4 +1,3 @@
-import { loadFromLocalStorage } from "../persistence";
 import { Action, Actions, State } from "./types";
 
 export const reducer = (state: State, action: Action): State => {
@@ -19,14 +18,4 @@ export const reducer = (state: State, action: Action): State => {
     default:
       throw Error("Unsupported action called in ToDoList reducer");
   }
-};
-
-export const initFunction = (defaultState: State): State => {
-  const stateFromLocalStorage: State | null = loadFromLocalStorage();
-  return stateFromLocalStorage
-    ? stateFromLocalStorage.map((item) => ({
-        ...item,
-        date: new Date(item.date),
-      }))
-    : defaultState;
 };

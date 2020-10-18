@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-import { useToDoListStoreState } from "../../../core/toDoListStore/store";
+import { useToDoListStoreState } from "../../../core/stores/toDoListStore/store";
 import { withLogger } from "../../hoc/withLogger";
 
 import { ToDoItem } from "../../../types/toDoItem";

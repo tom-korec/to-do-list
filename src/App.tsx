@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import { ToDoListApp } from "./components/toDoListApp/ToDoListApp";
+import { ToDoListApp } from "./components/todo-app/ToDoListApp";
 
 function App() {
   return (
