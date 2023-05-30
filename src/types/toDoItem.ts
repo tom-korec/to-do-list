@@ -1,6 +1,6 @@
 export interface ToDoItem {
     id: string;
     text: string;
-    isOpen: boolean;
+    isActive: boolean;
     date: Date;
 }

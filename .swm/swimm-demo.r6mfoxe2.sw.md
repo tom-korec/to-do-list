@@ -7,7 +7,7 @@ app_version: 1.9.14
 
 Entry point of the app
 
-`document.getElementById`<swm-token data-swm-token=":src/index.tsx:9:1:3:`  document.getElementById(&#39;root&#39;)`"/> returns html element where our app will live!
+`document.querySelector`<swm-token data-swm-token=":src/index.tsx:9:1:3:`  document.querySelector(&#39;#root&#39;)`"/> returns html element where our app will live!
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 src/index.tsx
 ```tsx
@@ -15,20 +15,20 @@ Entry point of the app
 6        <React.StrictMode>
 7          <App />
 8        </React.StrictMode>,
-9        document.getElementById('root')
+9        document.querySelector('#root')
 10     );
 ```
 
 <br/>
 
-`isOpen`<swm-token data-swm-token=":src/types/toDoItem.ts:4:1:1:`    isOpen: boolean;`"/> field
+`isActive`<swm-token data-swm-token=":src/types/toDoItem.ts:4:1:1:`    isActive: boolean;`"/> field
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 src/types/toDoItem.ts
 ```typescript
 1      export interface ToDoItem {
 2          id: string;
 3          text: string;
-4          isOpen: boolean;
+4          isActive: boolean;
 5          date: Date;
 6      }
 ```
